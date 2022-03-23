@@ -1,4 +1,4 @@
-package com.example.genjitsu
+package com.heartwinhaveluck.genjitsu
 
 import io.flutter.embedding.android.FlutterActivity
 
