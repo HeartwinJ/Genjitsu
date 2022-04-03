@@ -10,13 +10,16 @@ class AddNews extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            TextFormField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                fillColor: Colors.grey[900],
-                filled: true,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0),
+              child: TextFormField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                  fillColor: Colors.grey[900],
+                  filled: true,
+                ),
+                maxLines: 25,
               ),
-              maxLines: 25,
             ),
             const SizedBox(height: 20.0),
             TextButton(

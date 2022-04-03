@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "358811436510",
+    "project_id": "genjitsu-f52ac",
+    "storage_bucket": "genjitsu-f52ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358811436510:android:9add0eb762e14c271bc94f",
+        "android_client_info": {
+          "package_name": "com.heartwinhaveluck.genjitsu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358811436510-2h4of096r9v5010a606vn5v9rgadgrf7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuS8obUL4RABINYe1UUKsMyCPKf2Kvepw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358811436510-2h4of096r9v5010a606vn5v9rgadgrf7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

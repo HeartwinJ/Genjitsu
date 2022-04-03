@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:genjitsu/services/auth_service.dart';
 
 class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+  ProfilePage({Key? key}) : super(key: key);
+
+  final AuthService _auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -14,20 +17,23 @@ class ProfilePage extends StatelessWidget {
               CircleAvatar(
                 radius: 120.0,
                 backgroundColor: Colors.grey[850],
+                foregroundImage: NetworkImage(_auth.curPhotoURL!),
               ),
               const SizedBox(height: 20.0),
-              const Text(
-                'Heartwin Haveluck',
-                style: TextStyle(fontSize: 28.0),
+              Text(
+                _auth.curName!,
+                style: const TextStyle(fontSize: 28.0),
               ),
-              const Text('heartwinhaveluck@gmail.com'),
+              Text(_auth.curEmail!),
             ],
           ),
         ),
         Padding(
           padding: const EdgeInsets.all(40.0),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              _auth.signOut();
+            },
             child: const Padding(
               padding: EdgeInsets.symmetric(
                 vertical: 8.0,

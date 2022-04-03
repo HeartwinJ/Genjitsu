@@ -21,7 +21,7 @@ class _AppWrapperState extends State<AppWrapper> {
       page: const AddNews(),
     ),
     NavDetail(
-      page: const ProfilePage(),
+      page: ProfilePage(),
     ),
   ];
 
@@ -34,24 +34,26 @@ class _AppWrapperState extends State<AppWrapper> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          children: [
-            const Padding(
-              padding: EdgeInsets.symmetric(vertical: 20.0),
-              child: Text(
-                '現実',
-                style: TextStyle(
-                  fontSize: 48.0,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 8.0,
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 20.0),
+                child: Text(
+                  '現実',
+                  style: TextStyle(
+                    fontSize: 48.0,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 8.0,
+                  ),
                 ),
               ),
-            ),
-            Expanded(
-              child: _children.elementAt(_currentindex).page,
-            ),
-          ],
+              Expanded(
+                child: _children.elementAt(_currentindex).page,
+              ),
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
