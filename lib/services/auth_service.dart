@@ -1,8 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:genjitsu/services/store_service.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final StoreService _store = StoreService();
 
   Stream<User?> get userStream {
     return _auth.authStateChanges();
@@ -34,7 +36,13 @@ class AuthService {
         idToken: googleAuth.idToken,
       );
       User? user;
-      await _auth.signInWithCredential(credential).then((authResult) => {user = authResult.user!}).catchError((error) => print(error));
+      await _auth
+          .signInWithCredential(credential)
+          .then((authResult) => {
+                user = authResult.user!,
+                if (authResult.additionalUserInfo!.isNewUser) _store.createUser(user!),
+              })
+          .catchError((error) => print(error));
       return user;
     } catch (error) {
       print(error.toString());

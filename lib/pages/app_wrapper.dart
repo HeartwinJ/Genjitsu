@@ -13,17 +13,21 @@ class AppWrapper extends StatefulWidget {
 
 class _AppWrapperState extends State<AppWrapper> {
   int _currentindex = 0;
-  final List<NavDetail> _children = <NavDetail>[
-    NavDetail(
-      page: NewsFeed(),
-    ),
-    NavDetail(
-      page: const AddNews(),
-    ),
-    NavDetail(
-      page: ProfilePage(),
-    ),
-  ];
+  late List<NavDetail> _children;
+
+  _AppWrapperState() {
+    _children = <NavDetail>[
+      NavDetail(
+        page: const NewsFeed(),
+      ),
+      NavDetail(
+        page: AddNews(navController: _onNavTabTapped),
+      ),
+      NavDetail(
+        page: ProfilePage(),
+      ),
+    ];
+  }
 
   _onNavTabTapped(int index) {
     setState(() {

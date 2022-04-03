@@ -29,16 +29,22 @@ class NewsFeedWrapper extends StatelessWidget {
                         letterSpacing: 8.0,
                       ),
                     ),
-                    IconButton(
-                      icon: const Icon(Icons.login),
-                      onPressed: () {
+                    GestureDetector(
+                      child: Column(children: const [
+                        Icon(Icons.login),
+                        SizedBox(
+                          height: 5,
+                        ),
+                        Text('Login'),
+                      ]),
+                      onTap: () {
                         AuthService().signInWithGoogle();
                       },
                     ),
                   ],
                 ),
               ),
-              Expanded(
+              const Expanded(
                 child: NewsFeed(),
               ),
             ],
