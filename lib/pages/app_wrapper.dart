@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:genjitsu/models/nav_detail.dart';
-import 'package:genjitsu/pages/add_news.dart';
-import 'package:genjitsu/pages/news_feed.dart';
-import 'package:genjitsu/pages/profile_page.dart';
+import 'package:genjitsu/components/add_news.dart';
+import 'package:genjitsu/components/news_feed.dart';
+import 'package:genjitsu/components/profile_page.dart';
 
 class AppWrapper extends StatefulWidget {
   const AppWrapper({Key? key}) : super(key: key);

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:genjitsu/pages/news_feed.dart';
+import 'package:genjitsu/components/news_feed.dart';
 import 'package:genjitsu/services/auth_service.dart';
 
 class NewsFeedWrapper extends StatelessWidget {

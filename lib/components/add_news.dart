@@ -66,7 +66,7 @@ class _AddNewsState extends State<AddNews> {
                           'Content-Type': 'application/json; charset=UTF-8',
                         },
                         body: jsonEncode({
-                          'model': 'DT',
+                          'model': 'RF',
                           'newsBody': textController.text,
                         }),
                       )
