@@ -41,7 +41,7 @@ class _NewsFeedState extends State<NewsFeed> {
             padding: const EdgeInsets.all(8.0),
             child: ListView.builder(
               physics: const BouncingScrollPhysics(),
-              cacheExtent: 10,
+              cacheExtent: snapshot.data!.length * 200,
               itemCount: snapshot.data!.length,
               itemBuilder: (_, int index) => NewsCard(
                 snapshot.data![index],

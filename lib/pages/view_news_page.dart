@@ -42,6 +42,7 @@ class ViewNewsPage extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
                     child: Card(
                       child: Column(
                         children: [
